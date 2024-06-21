@@ -85,13 +85,46 @@ section > article > img {
   border-radius: 10px;
   height: 200px;
 }
-.camisetas{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
-    margin: 20px;
-    margin-left: 30px;
-    
+.camisetas {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+.camisetas > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+}
+.pantalones {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pantalones > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+  }
+article > button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+/* Añadir sombra a las targetas, añadir hover a los buttons y añadir click button */
 /* Aplicar medias queries para tablet y pantallas grandes */
 @media screen and (max-width: 430px) {
   .container {
