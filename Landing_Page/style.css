@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +6,7 @@
   list-style: none;
   text-decoration: none;
   font-family: "Montserrat";
+  color: black;
 }
 .hg_header {
   grid-area: header;
@@ -29,51 +30,71 @@
     "header header header"
     "aside main main"
     "footer footer footer";
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 175px 1fr;
   grid-template-rows: 125px 1fr 70px;
   min-height: 100vh;
   width: 100%;
 }
-header{
-    display: flex;
+header {
+  display: flex;
 }
 .head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    width: 100%;
-    padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  padding: 5px;
 }
-header > img{ 
-    border-radius: 10px;
-    width: 200px;
+header > img {
+  border-radius: 10px;
+  width: 200px;
 }
 .head > h1 {
-    font-size: 64px;
+  font-size: 64px;
 }
 .head > p {
-    font-size: 32px;
+  font-size: 32px;
 }
 nav {
-    width: 50%;
-    margin: auto;
+  width: 50%;
+  margin: auto;
+}
+nav > ul {
+  display: flex;
+  align-items: center;
+}
+nav > ul > li {
+  margin: 10px;
+  margin-left: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+aside > section > ul {
+  margin: 10px;
+}
+aside > section > ul > li {
+  margin: auto;
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+section > article > img {
+  border-radius: 10px;
+  height: 200px;
+}
+.camisetas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    margin: 20px;
+    margin-left: 30px;
     
-}
-nav > ul{ 
-    display: flex;
-    align-items: center;
-}
-nav > ul > li{
-    margin: 10px;
-    margin-left: 20px;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px 20px;
 }
 /* Aplicar medias queries para tablet y pantallas grandes */
 @media screen and (max-width: 430px) {
-  .container     {
+  .container {
     grid-template-areas:
       "header"
       "aside"
