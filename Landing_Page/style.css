@@ -226,6 +226,9 @@ section > article > img {
   padding: 15px;
   background-color: #fff;
 }
+h3{
+    font-size: 22px;
+}
 article > button {
   padding: 10px 20px;
   border-radius: 10px;
@@ -262,7 +265,7 @@ aside > section > button {
   border: none;
   cursor: pointer;
   margin-top: 5px;
-}
+  }
 aside > section > button > img {
   width: 24px;
   height: 24px;
@@ -304,9 +307,9 @@ footer{
     font-size: 18px;
   }
   .menu {
-    display: flex;
-    width: 50px;
-    height: 50px;
+    display: block;
+    width: 35px;
+    height: 35px;
     margin: 23px 10px 0 0;
     cursor: pointer;
   }
@@ -319,10 +322,16 @@ footer{
     display: none;
   }
   .menu {
-    display: flex;
+    display: block;
     width: 50px;
     height: 50px;
-    margin: 42px 26px 0 0;
+    margin: 20px 15px 0 0;
     cursor: pointer;
+  }
+  .search-button{
+    padding: 6px;
+  }
+  .search-bar{
+    padding: 10px;
   }
 }
