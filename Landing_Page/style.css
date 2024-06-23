@@ -8,21 +8,28 @@
   font-family: "Montserrat";
   color: black;
 }
+:root {
+  --primary-color: #fff;
+}
 .hg_header {
   grid-area: header;
-  background-color: aquamarine;
+  background-color: #333333;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
 }
 .hg_main {
   grid-area: main;
-  background-color: blueviolet;
+  background-color: #333333;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
 }
 .hg_aside {
   grid-area: aside;
-  background-color: yellowgreen;
+  background-color: #333333;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
 }
 .hg_footer {
   grid-area: footer;
-  background-color: pink;
+  background-color: #333333;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
 }
 .container {
   display: grid;
@@ -52,10 +59,13 @@ header > img {
 }
 .head > h1 {
   font-size: 64px;
+  letter-spacing: 8px;
+  color: var(--primary-color);
 }
 .head > p {
-  font-size: 32px;
+  font-size: 20px;
   text-align: center;
+  color: var(--primary-color);
 }
 nav {
   width: 50%;
@@ -68,26 +78,50 @@ nav > ul {
 nav > ul > li {
   margin: 10px;
   margin-left: 20px;
-  border: 1px solid black;
-  border-radius: 10px;
   padding: 10px 20px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+nav > ul > li > a {
+  color: var(--primary-color);
+}
+.menu {
+  display: none;
 }
 aside > section > ul {
   margin: 10px;
 }
 aside > section > ul > li {
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 5px;
-  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.14);
   border-radius: 10px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 90%;
   cursor: pointer;
+}
+aside > section > ul > li > a {
+  color: #fff;
 }
 section > article > img {
   border-radius: 10px;
   height: 200px;
+}
+.search-bar {
+  padding: 8px;
+}
+.search-button {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 0px;
 }
 .camisetas {
   display: flex;
@@ -233,7 +267,18 @@ aside > section > button > img {
   width: 24px;
   height: 24px;
 }
-
+.rrss {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+footer{
+    color: var(--primary-color);
+}
+/* Aplicar variables y rel=noopener */
 /* Aplicar medias queries para tablet y pantallas grandes */
 @media screen and (max-width: 430px) {
   .container {
@@ -248,5 +293,36 @@ aside > section > button > img {
       50px
       1fr
       30px;
+  }
+  header > nav {
+    display: none;
+  }
+  .head > h1 {
+    font-size: 36px;
+  }
+  .head > p {
+    font-size: 18px;
+  }
+  .menu {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 23px 10px 0 0;
+    cursor: pointer;
+  }
+  aside > section > ul {
+    display: none;
+  }
+}
+@media screen and (min-width: 430px) and (max-width: 768px) {
+  header > nav {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 42px 26px 0 0;
+    cursor: pointer;
   }
 }
